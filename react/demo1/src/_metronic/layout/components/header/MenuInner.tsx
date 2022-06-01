@@ -9,9 +9,10 @@ export function MenuInner() {
   return (
     <>
       <MenuItem title='Test My server' to='/my-page' />
+      <MenuItem title='Web Socket Client Test' to = '/client'/>
       <MenuItem title={intl.formatMessage({id: 'MENU.DASHBOARD'})} to='/dashboard' />
-      {/* <MenuItem title='Layout Builder' to='/builder' /> */}
-      {/* <MenuInnerWithSub
+      {/* <MenuItem title='Layout Builder' to='/builder' />
+      <MenuInnerWithSub
         title='Crafted'
         to='/crafted'
         menuPlacement='bottom-start'
@@ -99,9 +100,9 @@ export function MenuInner() {
           <MenuItem to='/crafted/widgets/tables' title='Tables' hasBullet={true} />
           <MenuItem to='/crafted/widgets/feeds' title='Feeds' hasBullet={true} />
         </MenuInnerWithSub>
-      </MenuInnerWithSub> */}
+      </MenuInnerWithSub>
 
-      {/* <MenuInnerWithSub title='Apps' to='/apps' menuPlacement='bottom-start' menuTrigger='click'> */}
+      <MenuInnerWithSub title='Apps' to='/apps' menuPlacement='bottom-start' menuTrigger='click'> */}
         {/* PAGES */}
         {/* <MenuInnerWithSub
           title='Chat'

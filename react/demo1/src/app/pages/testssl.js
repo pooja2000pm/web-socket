@@ -4,6 +4,7 @@ import { useState} from "react";
 import { Result } from "./Result";
 //const queryClient = new QueryClient();
 import axios from "axios";
+import { ProgressBar } from "react-bootstrap-v5";
 //import { MenuItem } from "../../_metronic/layout/components/header/MenuItem";
 //import { render } from "react-dom";
 //import { render } from "react-dom";
@@ -21,7 +22,8 @@ import axios from "axios";
 // export {Testssl}
     
 //  function Testcomp() {
-  export function Testssl(){
+ export function Testssl()
+ {
   const [testData, setTestData] = useState('');
   const [loading, setLoading] = useState(false);
   //const [tdata, setData] = useState([{}]);
@@ -56,8 +58,12 @@ import axios from "axios";
     
    
 
- const onSubmitHandler = (e) => {
-  e.preventDefault()
+ const onSubmitHandler = (inputip) => {
+
+  validateinput(inputip);
+  inputip.preventDefault();
+
+
   //setEndPoint(testData)
   //setTestData(testData)
   //console.log(testData)
@@ -91,9 +97,22 @@ import axios from "axios";
   }
  
   
+  function validateinput(inputText) {
+    var ipformat1 = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+   // var ipformat2 = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\.-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\.-]*[A-Za-z0-9])$/;
+    var ipformat = ipformat1;
+ if(inputText.value.match(ipformat))
+ {
+ document.form1.text1.focus();
+ return true;
+ }
+ else
+ {
+ alert("You have entered an invalid IP address/Hostname!");
+ document.form1.text1.focus();return false;
+  }
 
-
-    
+} 
   
    
   //  e.preventDefault()
@@ -122,7 +141,7 @@ import axios from "axios";
   <div className="container my-3">
     <div className="row">
       <section>
-   <form method="POST" onSubmit={onSubmitHandler} > 
+   <form method="POST" name=" form1"onSubmit={onSubmitHandler(document.form1.host)} > 
 <label>Hostname</label>
 <input type="text" className ="form-control " placeholder=" Enter hostname / ip address" id = "hostname" name = "host" value={testData} onChange={e => setTestData(e.target.value)} />
  <button className ="btn btn-primary btn-hover-rise me-4" type="submit " >Scan </button>
@@ -131,7 +150,7 @@ import axios from "axios";
  </section>
  <div>
 <div>
-{loading ? (display && <Result display = {display}/> ) :  ( <div class="spinner"> Loading.. </div>)}
+{loading ? (display && <Result display = {display}/> ) :  (<ProgressBar />)}
 {/* {display && <Result display = {display}/>} */}
 </div>
   
@@ -146,6 +165,8 @@ import axios from "axios";
 )
 
 }
+ 
+
 export default Testssl;
 
  

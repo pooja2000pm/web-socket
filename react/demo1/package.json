@@ -2,7 +2,6 @@
   "name": "demo1",
   "version": "8.0.35",
   "private": true,
-  "proxy": "http://localhost:5000/",
   "homepage": "/metronic8/react/demo1",
   "dependencies": {
     "@formatjs/intl-pluralrules": "^4.0.28",
@@ -60,6 +59,7 @@
     "rtlcss-webpack-plugin": "^4.0.6",
     "sass": "1.32.1",
     "socicon": "^3.0.5",
+    "socket.io-client": "^4.5.1",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.9"
