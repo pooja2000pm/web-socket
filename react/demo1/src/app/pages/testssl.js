@@ -4,7 +4,7 @@ import { useState} from "react";
 import { Result } from "./Result";
 //const queryClient = new QueryClient();
 import axios from "axios";
-import { ProgressBar } from "react-bootstrap-v5";
+import { Button, ProgressBar } from "react-bootstrap-v5";
 //import { MenuItem } from "../../_metronic/layout/components/header/MenuItem";
 //import { render } from "react-dom";
 //import { render } from "react-dom";
@@ -58,10 +58,10 @@ import { ProgressBar } from "react-bootstrap-v5";
     
    
 
- const onSubmitHandler = (inputip) => {
+ const onSubmitHandler = () => {
 
-  validateinput(inputip);
-  inputip.preventDefault();
+  // validateinput(inputip);
+  // inputip.preventDefault();
 
 
   //setEndPoint(testData)
@@ -97,22 +97,22 @@ import { ProgressBar } from "react-bootstrap-v5";
   }
  
   
-  function validateinput(inputText) {
-    var ipformat1 = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+  // function validateinput(inputText) {
+  //   var ipformat1 = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
    // var ipformat2 = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\.-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\.-]*[A-Za-z0-9])$/;
-    var ipformat = ipformat1;
- if(inputText.value.match(ipformat))
- {
- document.form1.text1.focus();
- return true;
- }
- else
- {
- alert("You have entered an invalid IP address/Hostname!");
- document.form1.text1.focus();return false;
-  }
+//     var ipformat = ipformat1;
+//  if(inputText.value.match(ipformat))
+//  {
+//  document.form1.text1.focus();
+//  return true;
+//  }
+//  else
+//  {
+//  alert("You have entered an invalid IP address/Hostname!");
+//  document.form1.text1.focus();return false;
+//   }
 
-} 
+// } 
   
    
   //  e.preventDefault()
@@ -141,12 +141,12 @@ import { ProgressBar } from "react-bootstrap-v5";
   <div className="container my-3">
     <div className="row">
       <section>
-   <form method="POST" name=" form1"onSubmit={onSubmitHandler(document.form1.host)} > 
+   {/* <form method="POST" name= " form1" >  */}
 <label>Hostname</label>
 <input type="text" className ="form-control " placeholder=" Enter hostname / ip address" id = "hostname" name = "host" value={testData} onChange={e => setTestData(e.target.value)} />
- <button className ="btn btn-primary btn-hover-rise me-4" type="submit " >Scan </button>
+ <Button className ="btn btn-primary btn-hover-rise" type="submit " onClick={onSubmitHandler()} >Scan </Button>
  {/* <MenuItem title="Scan" to="result" onSubmit ={onSubmitHandler}/> */}
- </form>
+ {/* </form> */}
  </section>
  <div>
 <div>

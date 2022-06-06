@@ -38,9 +38,90 @@ function Socketclient() {
      </p>
      <br>
      </br>
+    
      {messageReceived}
- </section>
- </div>
+     {/* <div align = "center">
+            <br>
+            </br>
+        <div className="reportSection">
+           <div className="sectionTitle"> {data.ip_data[0].testing_label} </div>
+           <div className="sectionBody">
+               <img className="tIcon" src = "https://www.ssllabs.com/images/icon-certificate.png" width = "65" height = "50" alt="noimage"></img>
+               <table className="reprtTable">
+                   <thead>
+                       <tr>
+                           <td className="tableHead" >
+                               <div className="serverKeyCert">Protocol details</div>
+                           </td>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Requested Host</td>
+                           <td className="tableCell">{dis.host}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Port</td>
+                           <td className="tableCell">{dis.port}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">IP Address</td>
+                           <td className="tableCell">{dis.endpoints[0].ipAddress}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Engine Version</td>
+                           <td className="tableCell">{dis.engineVersion}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Grade</td>
+                           <td className="tableCell">{dis.endpoints[0].grade}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Grade Trusted Ignore</td>
+                           <td className="tableCell">{dis.endpoints[0].gradeTrustIgnored}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Duration</td>
+                           <td className="tableCell">{dis.endpoints[0].duration}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Progress</td>
+                           <td className="tableCell">{dis.endpoints[0].progress}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Protocol</td>
+                           <td className="tableCell">{dis.protocol}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Start Time</td>
+                           <td className="tableCell">{dis.startTime}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Status</td>
+                           <td className="tableCell">{dis.status}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Test Time</td>
+                           <td className="tableCell">{dis.testTime}</td>
+                       </tr>
+                       <tr className="tableRow">
+                           <td className="tableLabel">Criteria Vision</td>
+                           <td className="tableCell">{dis.criteriaVersion}</td>
+                       </tr>
+
+                   </tbody>
+               </table>
+           
+               </div>
+               </div>
+               <div>
+
+
+     </div> */}
+    
+
+</section>
+</div>
 </div>
 </>
   )

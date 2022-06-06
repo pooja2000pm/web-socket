@@ -3,7 +3,7 @@ import {Redirect, Route, Switch} from 'react-router-dom'
 import {FallbackView} from '../../_metronic/partials'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
-//import {Testssl} from '../pages/testssl'
+import {Testssl} from '../pages/testssl'
 import { Result } from '../pages/Result'
 import Socketclient  from '../pages/Socketclient'
 
@@ -20,7 +20,7 @@ export function PrivateRoutes() {
       <Switch>
         <Route path='/dashboard' component={DashboardWrapper} />
         {/* <Route path='/builder' component={BuilderPageWrapper} /> */}
-        {/* <Route path='/my-page' component={Testssl} /> */}
+        <Route path='/my-page' component={Testssl} />
         <Route path= '/result' component={Result} />
         <Route path = '/client' component ={Socketclient}/>
         <Route path='/crafted/pages/profile' component={ProfilePage} />
